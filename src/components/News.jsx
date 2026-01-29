@@ -1,38 +1,49 @@
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight } from 'lucide-react';
+import { useTranslation } from '../contexts/TranslationContext';
 
 const News = () => {
+  const { t, language } = useTranslation();
+
   const newsItems = [
     {
       id: 1,
       date: '2026.01.25',
-      title: 'NOWA ERA PODZIEMNEJ ELEKTRONIKI',
-      category: 'ANNOUNCEMENT',
-      excerpt: 'Rozpoczynamy nowy rozdział w historii polskiej sceny underground. Przygotowujemy serię wydarzeń, które zmienią sposób, w jaki doświadczamy muzyki elektronicznej.',
+      title: language === 'pl' ? 'NOWA ERA PODZIEMNEJ ELEKTRONIKI' : 'NEW ERA OF UNDERGROUND ELECTRONICS',
+      category: t('news.categories.announcement'),
+      excerpt: language === 'pl' 
+        ? 'Rozpoczynamy nowy rozdział w historii polskiej sceny underground. Przygotowujemy serię wydarzeń, które zmienią sposób, w jaki doświadczamy muzyki elektronicznej.'
+        : 'We are starting a new chapter in the history of the Polish underground scene. We are preparing a series of events that will change the way we experience electronic music.',
       color: 'cyber-violet'
     },
     {
       id: 2,
       date: '2026.01.20',
-      title: 'DARK PSY GATHERING - RELACJA',
-      category: 'EVENT RECAP',
-      excerpt: 'Ponad 500 dusz zjednoczyło się w rytuale dźwięku. Energia była niesamowita, a soundsystem pokazał swoją prawdziwą moc.',
+      title: language === 'pl' ? 'DARK PSY GATHERING - RELACJA' : 'DARK PSY GATHERING - RECAP',
+      category: t('news.categories.eventRecap'),
+      excerpt: language === 'pl'
+        ? 'Ponad 500 dusz zjednoczyło się w rytuale dźwięku. Energia była niesamowita, a soundsystem pokazał swoją prawdziwą moc.'
+        : 'Over 500 souls united in a sound ritual. The energy was incredible, and the soundsystem showed its true power.',
       color: 'toxic-green'
     },
     {
       id: 3,
       date: '2026.01.15',
-      title: 'NOWI ARTYŚCI W KOLEKTYWIE',
-      category: 'ARTISTS',
-      excerpt: 'Witamy trzech nowych producentów w rodzinie SELEKTRONIKA. Ich brzmienie wniesie świeżą energię do naszego soundsystemu.',
+      title: language === 'pl' ? 'NOWI ARTYŚCI W KOLEKTYWIE' : 'NEW ARTISTS IN THE COLLECTIVE',
+      category: t('news.categories.artists'),
+      excerpt: language === 'pl'
+        ? 'Witamy trzech nowych producentów w rodzinie SELEKTRONIKA. Ich brzmienie wniesie świeżą energię do naszego soundsystemu.'
+        : 'We welcome three new producers to the SELEKTRONIKA family. Their sound will bring fresh energy to our soundsystem.',
       color: 'electric-blue'
     },
     {
       id: 4,
       date: '2026.01.10',
-      title: 'MANIFEST CYFROWEGO SZAMANIZMU',
-      category: 'PHILOSOPHY',
-      excerpt: 'Muzyka jako portal do wyższych stanów świadomości. Taniec jako forma medytacji. Społeczność jako organizm.',
+      title: language === 'pl' ? 'MANIFEST CYFROWEGO SZAMANIZMU' : 'MANIFEST OF DIGITAL SHAMANISM',
+      category: t('news.categories.philosophy'),
+      excerpt: language === 'pl'
+        ? 'Muzyka jako portal do wyższych stanów świadomości. Taniec jako forma medytacji. Społeczność jako organizm.'
+        : 'Music as a portal to higher states of consciousness. Dance as a form of meditation. Community as an organism.',
       color: 'ritual-red'
     }
   ];
@@ -62,7 +73,7 @@ const News = () => {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-4">
-            <span className="text-glitch" data-text="NEWS">NEWS</span>
+            <span className="text-glitch" data-text={t('news.title')}>{t('news.title')}</span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-cyber-violet via-toxic-green to-electric-blue" />
         </motion.div>
@@ -102,7 +113,7 @@ const News = () => {
                 </p>
 
                 <div className="flex items-center gap-2 text-sm font-mono tracking-wider text-cyber-violet group-hover:gap-4 transition-all">
-                  <span>CZYTAJ WIĘCEJ</span>
+                  <span>{t('news.readMore')}</span>
                   <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
@@ -129,7 +140,7 @@ const News = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            WIĘCEJ WIADOMOŚCI
+            {t('news.moreNews')}
           </motion.button>
         </motion.div>
       </div>

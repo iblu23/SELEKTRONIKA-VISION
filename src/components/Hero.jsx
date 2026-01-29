@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useTranslation } from '../contexts/TranslationContext';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -16,10 +18,10 @@ const Hero = () => {
   }, []);
 
   const manifesto = [
-    "MUZYKA JAKO ENERGIA",
-    "DŹWIĘK JAKO TRANSFORMACJA",
-    "TANIEC JAKO KOMUNIKACJA",
-    "SPOŁECZNOŚĆ JAKO RYTUAŁ"
+    t('hero.manifesto.energy'),
+    t('hero.manifesto.transformation'),
+    t('hero.manifesto.communication'),
+    t('hero.manifesto.ritual')
   ];
 
   return (
@@ -150,7 +152,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            UNDERGROUND ELECTRONIC MUSIC COLLECTIVE
+            {t('hero.tagline')}
           </motion.p>
         </motion.div>
 
@@ -188,7 +190,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="relative z-10">ENTER THE FREQUENCY</span>
+            <span className="relative z-10">{t('hero.enterFrequency')}</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-cyber-violet via-electric-blue to-toxic-green"
               initial={{ x: '-100%' }}

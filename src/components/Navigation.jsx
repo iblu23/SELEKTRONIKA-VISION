@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from '../contexts/TranslationContext';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,13 +17,13 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'START', href: '#hero' },
-    { name: 'NEWS', href: '#news' },
-    { name: 'EVENTS', href: '#events' },
-    { name: 'ARTISTS', href: '#artists' },
-    { name: 'SOUNDSYSTEM', href: '#soundsystem' },
-    { name: 'ABOUT', href: '#about' },
-    { name: 'CONTACT', href: '#contact' },
+    { name: t('navigation.start'), href: '#hero' },
+    { name: t('navigation.news'), href: '#news' },
+    { name: t('navigation.events'), href: '#events' },
+    { name: t('navigation.artists'), href: '#artists' },
+    { name: t('navigation.soundsystem'), href: '#soundsystem' },
+    { name: t('navigation.about'), href: '#about' },
+    { name: t('navigation.contact'), href: '#contact' },
   ];
 
   return (

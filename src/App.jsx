@@ -5,18 +5,23 @@ import Events from './components/Events'
 import Artists from './components/Artists'
 import About from './components/About'
 import Footer from './components/Footer'
+import LanguageSwitcher from './components/LanguageSwitcher'
+import { TranslationProvider } from './contexts/TranslationContext'
 
 function App() {
   return (
-    <div className="min-h-screen bg-void text-white">
-      <Navigation />
-      <Hero />
-      <News />
-      <Events />
-      <Artists />
-      <About />
-      <Footer />
-    </div>
+    <TranslationProvider>
+      <div className="min-h-screen bg-void text-white">
+        <Navigation />
+        <Hero />
+        <News />
+        <Events />
+        <Artists />
+        <About />
+        <Footer />
+        <LanguageSwitcher />
+      </div>
+    </TranslationProvider>
   )
 }
 

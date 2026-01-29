@@ -132,7 +132,7 @@ const Footer = () => {
                 © 2026 SELEKTRONIKA. ALL RIGHTS RESERVED.
               </p>
               <p className="text-xs text-gray-600 font-mono">
-                BUILT WITH <span className="text-ritual-red">♥</span> FOR THE UNDERGROUND
+                BUILT BY Hack The System
               </p>
             </div>
           </div>

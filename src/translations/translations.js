@@ -93,7 +93,7 @@ export const translations = {
       email: "contact@selektronika.pl",
       location: "Polska / Poland",
       copyright: "© 2026 SELEKTRONIKA. ALL RIGHTS RESERVED.",
-      builtWith: "BUILT WITH ♥ FOR THE UNDERGROUND",
+      builtWith: "BUILT BY Hack The System",
       qrCode: "SCAN TO CONNECT",
       frequency: "FREQUENCY: 432Hz",
       keywords: "[ CYBER RITUAL · DIGITAL SHAMANISM · RAVE UNDERGROUND ]"
@@ -193,7 +193,7 @@ export const translations = {
       email: "contact@selektronika.pl", 
       location: "Poland / Worldwide",
       copyright: "© 2026 SELEKTRONIKA. ALL RIGHTS RESERVED.",
-      builtWith: "BUILT WITH ♥ FOR THE UNDERGROUND",
+      builtWith: "BUILT BY Hack The System",
       qrCode: "SCAN TO CONNECT",
       frequency: "FREQUENCY: 432Hz",
       keywords: "[ CYBER RITUAL · DIGITAL SHAMANISM · RAVE UNDERGROUND ]"

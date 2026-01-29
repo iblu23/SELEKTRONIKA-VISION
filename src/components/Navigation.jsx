@@ -35,10 +35,10 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <motion.a
             href="#hero"
-            className="text-2xl font-display font-bold tracking-wider"
+            className="text-xl md:text-2xl font-display font-bold tracking-wider"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -71,7 +71,7 @@ const Navigation = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-white hover:text-cyber-violet transition-colors"
+            className="md:hidden p-2 text-white hover:text-cyber-violet transition-colors touch-manipulation"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -84,7 +84,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10"
+            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10 max-h-[80vh] overflow-y-auto"
           >
             <div className="px-4 py-6 space-y-3">
               {navItems.map((item, index) => (

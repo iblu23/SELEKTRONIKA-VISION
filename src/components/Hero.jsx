@@ -41,7 +41,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-20">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] opacity-20">
         <motion.div
           className="w-full h-full border-2 border-cyber-violet rounded-full"
           animate={{
@@ -88,7 +88,7 @@ const Hero = () => {
               ease: "linear"
             }}
           >
-            <svg width="120" height="120" viewBox="0 0 120 120" className="mx-auto">
+            <svg width="80" height="80" viewBox="0 0 120 120" className="mx-auto md:w-120 md:h-120">
               <motion.circle
                 cx="60"
                 cy="60"
@@ -130,7 +130,7 @@ const Hero = () => {
             </svg>
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black tracking-tighter mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-display font-black tracking-tighter mb-6">
             <motion.span
               className="inline-block"
               initial={{ opacity: 0, y: 50 }}
@@ -150,7 +150,7 @@ const Hero = () => {
           </h1>
 
           <motion.p
-            className="text-xl md:text-2xl font-mono tracking-widest text-gray-400 mb-8"
+            className="text-lg md:text-xl lg:text-2xl font-mono tracking-widest text-gray-400 mb-8 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -160,7 +160,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
@@ -168,13 +168,13 @@ const Hero = () => {
           {manifesto.map((text, index) => (
             <motion.div
               key={index}
-              className="cyber-border p-6 bg-black/40 backdrop-blur-sm"
+              className="cyber-border p-4 md:p-6 bg-black/40 backdrop-blur-sm"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
               whileHover={{ scale: 1.05, borderColor: '#9D00FF' }}
             >
-              <p className="text-sm font-mono tracking-wider text-center">
+              <p className="text-xs md:text-sm font-mono tracking-wider text-center">
                 {text}
               </p>
             </motion.div>
@@ -189,7 +189,7 @@ const Hero = () => {
         >
           <motion.a
             href="#news"
-            className="group relative px-8 py-4 font-mono text-lg tracking-widest overflow-hidden"
+            className="group relative px-6 md:px-8 py-4 font-mono text-sm md:text-lg tracking-widest overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

@@ -10,10 +10,18 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
   }
 }
 
@@ -102,6 +110,7 @@
     background: linear-gradient(45deg, #9D00FF, #00FF41, #00D9FF) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     opacity: 0;
     transition: opacity 0.3s;
@@ -109,5 +118,45 @@
 
   .cyber-border:hover::before {
     opacity: 1;
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    .text-glitch {
+      animation: none;
+    }
+    
+    .text-glitch::before,
+    .text-glitch::after {
+      display: none;
+    }
+    
+    .grain::before {
+      opacity: 0.01;
+    }
+    
+    /* Better touch targets for mobile */
+    button, a, .clickable {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Reduce motion for mobile performance */
+    .reduce-motion * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Touch device optimizations */
+  @media (hover: none) and (pointer: coarse) {
+    .cyber-border:hover::before {
+      opacity: 0;
+    }
+    
+    .cyber-border:active::before {
+      opacity: 1;
+    }
   }
 }

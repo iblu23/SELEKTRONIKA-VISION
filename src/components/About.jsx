@@ -26,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative py-32 px-4 overflow-hidden">
+    <section id="about" className="relative py-16 md:py-24 lg:py-32 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-void" />
       
       <div className="absolute inset-0 opacity-5">
@@ -42,7 +42,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black tracking-tighter mb-6">
             SOUNDSYSTEM / <span className="text-cyber-violet">ABOUT</span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-cyber-violet to-toxic-green mx-auto mb-8" />

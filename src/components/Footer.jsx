@@ -10,7 +10,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="relative py-20 px-4 overflow-hidden bg-black border-t border-white/10">
+    <footer id="contact" className="relative py-12 md:py-20 px-4 overflow-hidden bg-black border-t border-white/10">
       <div className="absolute inset-0 grain" />
       
       <motion.div
@@ -22,14 +22,14 @@ const Footer = () => {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl font-display font-black tracking-tighter mb-4">
+            <h3 className="text-2xl md:text-3xl font-display font-black tracking-tighter mb-4">
               SELEKTRONIKA
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">

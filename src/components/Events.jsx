@@ -51,11 +51,11 @@ const Events = () => {
   ];
 
   return (
-    <section id="events" className="relative py-32 px-4 overflow-hidden">
+    <section id="events" className="relative py-16 md:py-24 lg:py-32 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-void" />
       
       <motion.div
-        className="absolute top-1/4 left-0 w-96 h-96 bg-toxic-green/10 rounded-full blur-3xl"
+        className="absolute top-1/4 left-0 w-48 h-48 md:w-96 md:h-96 bg-toxic-green/10 rounded-full blur-3xl"
         animate={{
           x: [0, 100, 0],
           scale: [1, 1.3, 1],
@@ -74,14 +74,14 @@ const Events = () => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black tracking-tighter mb-4">
             EVENTS / <span className="text-toxic-green">RAVES</span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-toxic-green to-electric-blue" />
         </motion.div>
 
         <div className="mb-20">
-          <h3 className="text-2xl font-mono tracking-widest mb-8 text-toxic-green">
+          <h3 className="text-xl md:text-2xl font-mono tracking-widest mb-8 text-toxic-green">
             &gt; UPCOMING_EVENTS
           </h3>
           
@@ -95,11 +95,11 @@ const Events = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="cyber-border bg-black/80 backdrop-blur-sm p-8 hover:bg-black/90 transition-all">
+                <div className="cyber-border bg-black/80 backdrop-blur-sm p-4 md:p-8 hover:bg-black/90 transition-all">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                     <div className="flex-1">
                       <div className="flex items-center gap-4 mb-4">
-                        <h3 className="text-3xl font-display font-bold group-hover:text-toxic-green transition-colors">
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold group-hover:text-toxic-green transition-colors">
                           {event.name}
                         </h3>
                         {event.status === 'announced' && (

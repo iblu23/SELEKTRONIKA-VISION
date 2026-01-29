@@ -49,11 +49,11 @@ const News = () => {
   ];
 
   return (
-    <section id="news" className="relative py-32 px-4 overflow-hidden grain">
+    <section id="news" className="relative py-16 md:py-24 lg:py-32 px-4 overflow-hidden grain">
       <div className="absolute inset-0 bg-gradient-to-b from-void via-black/50 to-void" />
       
       <motion.div
-        className="absolute top-0 right-0 w-96 h-96 bg-cyber-violet/10 rounded-full blur-3xl"
+        className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-cyber-violet/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.1, 0.2, 0.1],
@@ -72,7 +72,7 @@ const News = () => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black tracking-tighter mb-4">
             <span className="text-glitch" data-text={t('news.title')}>{t('news.title')}</span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-cyber-violet via-toxic-green to-electric-blue" />
@@ -87,7 +87,7 @@ const News = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
-              className="group relative cyber-border bg-black/60 backdrop-blur-sm p-8 cursor-pointer overflow-hidden"
+              className="group relative cyber-border bg-black/60 backdrop-blur-sm p-4 md:p-8 cursor-pointer overflow-hidden"
             >
               <motion.div
                 className={`absolute inset-0 bg-${item.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
@@ -104,15 +104,15 @@ const News = () => {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-display font-bold mb-4 group-hover:text-cyber-violet transition-colors">
+                <h3 className="text-lg md:text-2xl font-display font-bold mb-4 group-hover:text-cyber-violet transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-400 font-grotesk leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-gray-400 font-grotesk leading-relaxed mb-6">
                   {item.excerpt}
                 </p>
 
-                <div className="flex items-center gap-2 text-sm font-mono tracking-wider text-cyber-violet group-hover:gap-4 transition-all">
+                <div className="flex items-center gap-2 text-xs md:text-sm font-mono tracking-wider text-cyber-violet group-hover:gap-4 transition-all">
                   <span>{t('news.readMore')}</span>
                   <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
                 </div>

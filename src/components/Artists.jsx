@@ -54,11 +54,11 @@ const Artists = () => {
   ];
 
   return (
-    <section id="artists" className="relative py-32 px-4 overflow-hidden grain">
+    <section id="artists" className="relative py-16 md:py-24 lg:py-32 px-4 overflow-hidden grain">
       <div className="absolute inset-0 bg-gradient-to-b from-void via-black/50 to-void" />
       
       <motion.div
-        className="absolute bottom-1/4 right-0 w-96 h-96 bg-electric-blue/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-0 w-48 h-48 md:w-96 md:h-96 bg-electric-blue/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.4, 1],
           opacity: [0.1, 0.3, 0.1],
@@ -77,16 +77,16 @@ const Artists = () => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black tracking-tighter mb-4">
             <span className="text-electric-blue">ARTISTS</span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-electric-blue to-cyber-violet" />
-          <p className="mt-6 text-xl text-gray-400 font-mono max-w-2xl">
+          <p className="mt-6 text-lg md:text-xl text-gray-400 font-mono max-w-2xl">
             Nasi artyści to przewodnicy przez różne wymiary elektronicznej muzyki
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {artists.map((artist, index) => (
             <motion.div
               key={artist.id}

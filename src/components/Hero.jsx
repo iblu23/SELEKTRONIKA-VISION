@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useTranslation } from '../contexts/TranslationContext';
 
+import SoundWaveBackground from './SoundWaveBackground';
+
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { t } = useTranslation();
@@ -27,7 +29,8 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden grain">
       <div className="absolute inset-0 bg-gradient-to-b from-void via-void/95 to-void z-0" />
-      
+      <SoundWaveBackground className="absolute inset-0 w-full h-full" />
+
       <motion.div
         className="absolute inset-0 opacity-10"
         style={{

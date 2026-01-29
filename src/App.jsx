@@ -7,19 +7,23 @@ import About from './components/About'
 import Footer from './components/Footer'
 import LanguageSwitcher from './components/LanguageSwitcher'
 import { TranslationProvider } from './contexts/TranslationContext'
+import SoundWaveBackground from './components/SoundWaveBackground'
 
 function App() {
   return (
     <TranslationProvider>
-      <div className="min-h-screen bg-void text-white">
-        <Navigation />
-        <Hero />
-        <News />
-        <Events />
-        <Artists />
-        <About />
-        <Footer />
-        <LanguageSwitcher />
+      <div className="relative min-h-screen bg-void text-white">
+        <SoundWaveBackground />
+        <div className="relative z-10">
+          <Navigation />
+          <Hero />
+          <News />
+          <Events />
+          <Artists />
+          <About />
+          <Footer />
+          <LanguageSwitcher />
+        </div>
       </div>
     </TranslationProvider>
   )

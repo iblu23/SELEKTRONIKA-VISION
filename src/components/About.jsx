@@ -117,6 +117,31 @@ const About = () => {
         </div>
 
         <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="cyber-border bg-gradient-to-br from-ritual-red/10 to-cyber-violet/10 backdrop-blur-sm p-12 text-center mb-20"
+        >
+          <h3 className="text-3xl font-display font-bold mb-6">
+            THE DANCE
+          </h3>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+            We dance for laughter, we dance for tears, we dance for madness, we dance for fears, we dance for hopes, we dance for screams, we are the dancers, we create the dreams
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm font-mono">
+            <span className="px-4 py-2 border border-ritual-red/50 bg-ritual-red/10">LAUGHTER</span>
+            <span className="px-4 py-2 border border-cyber-violet/50 bg-cyber-violet/10">TEARS</span>
+            <span className="px-4 py-2 border border-toxic-green/50 bg-toxic-green/10">MADNESS</span>
+            <span className="px-4 py-2 border border-electric-blue/50 bg-electric-blue/10">FEARS</span>
+            <span className="px-4 py-2 border border-ritual-red/50 bg-ritual-red/10">HOPES</span>
+            <span className="px-4 py-2 border border-cyber-violet/50 bg-cyber-violet/10">SCREAMS</span>
+            <span className="px-4 py-2 border border-toxic-green/50 bg-toxic-green/10">DANCERS</span>
+            <span className="px-4 py-2 border border-electric-blue/50 bg-electric-blue/10">DREAMS</span>
+          </div>
+        </motion.div>
+
+        <motion.div
           id="soundsystem"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
